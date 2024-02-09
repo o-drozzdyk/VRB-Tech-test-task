@@ -1,0 +1,15 @@
+{
+  "files": {
+    "main.css": "/VRB-Tech-test-task/static/css/main.c60cc599.css",
+    "main.js": "/VRB-Tech-test-task/static/js/main.e623dc2e.js",
+    "static/js/592.bba00f6d.chunk.js": "/VRB-Tech-test-task/static/js/592.bba00f6d.chunk.js",
+    "index.html": "/VRB-Tech-test-task/index.html",
+    "main.c60cc599.css.map": "/VRB-Tech-test-task/static/css/main.c60cc599.css.map",
+    "main.e623dc2e.js.map": "/VRB-Tech-test-task/static/js/main.e623dc2e.js.map",
+    "592.bba00f6d.chunk.js.map": "/VRB-Tech-test-task/static/js/592.bba00f6d.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.c60cc599.css",
+    "static/js/main.e623dc2e.js"
+  ]
+}
