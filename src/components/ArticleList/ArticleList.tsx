@@ -11,7 +11,7 @@ export const ArticleList = () => {
 
   const [localArticles, setLocalArticles] = useState<Article[]>([]);
 
-  const { articles } = useAppSelector(state => state.articles);
+  const articles = useAppSelector(state => state.articles).articles || [];
 
   useEffect(() => {
     if (areMyArticlesShown) {
