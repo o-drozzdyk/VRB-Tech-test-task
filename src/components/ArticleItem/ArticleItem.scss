@@ -1,0 +1,65 @@
+@import '../../utils/colors.scss';
+
+.article {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 8px;
+  padding: 16px;
+  width: auto;
+  border-radius: 3px;
+  background-color: $color-grey;
+
+  &--pinned {
+    background-color: $color-yellow;
+  }
+
+  &__row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  &__title {
+    font-weight: 700;
+    text-align: left;
+  }
+
+  &__image {
+    width: 100%;
+    height: auto;
+  }
+
+  &__description {
+    margin-bottom: 8px;
+    padding: 8px;
+    border-radius: 3px;
+    text-align: justify;
+    background-color: $color-white;
+  }
+
+  &__author {
+    font-size: 12px;
+    text-align: left;
+    color: $color-blue;
+  }
+
+  &__icon {
+    opacity: 0;
+    width: 16px;
+    height: auto;
+    cursor: pointer;
+
+    &--pinned {
+      opacity: 1;
+    }
+
+    &--delete {
+      margin-left: 8px;
+    }
+  }
+
+  &:hover &__icon {
+    opacity: 1;
+  }
+}

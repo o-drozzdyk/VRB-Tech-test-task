@@ -1,0 +1,88 @@
+@import '../../utils/mixins.scss';
+@import '../../utils/colors.scss';
+
+.form {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  width: 400px;
+  padding: 16px;
+  margin-inline: auto;
+  border: 2px solid $color-blue;
+  border-radius: 3px;
+  box-shadow: 0 4px 16px $color-black;
+
+  @include onPhone {
+    width: 100%;
+    max-width: 400px;
+  }
+
+  &__group {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+  }
+
+  &__label {
+    @include onPhone {
+      font-size: 14px;
+    }
+  }
+
+  &__input {
+    padding: 4px;
+    height: 28px;
+    font-size: 16px;
+    border: 1px solid $color-black;
+    border-radius: 3px;
+
+    @include onPhone {
+      height: 24px;
+      font-size: 14px;
+    }
+
+    &--resize {
+      resize: vertical;
+    }
+  }
+
+  &__buttons {
+    align-self: flex-end;
+  }
+
+  &__button {
+    height: 28px;
+    padding: 0 10px;
+    font-size: 16px;
+    font-weight: 700;
+  
+    border-radius: 3px;
+    cursor: pointer;
+  
+    @include onPhone {
+      font-size: 14px;
+      line-height: 16px;
+    }
+
+    &:hover {
+      box-shadow: 0 0 8px $color-blue;
+    }
+
+    &--cancel {
+      border: 2px solid $color-blue;
+      color: $color-black;
+      background-color: transparent;
+    }
+  
+    &--submit {
+      margin: 8px 0 0 16px;
+      color: $color-light;
+      border-color: transparent;
+      background-color: $color-blue;
+
+      @include onPhone {
+        margin-left: 4px;
+      }
+    }
+  }
+}

@@ -1,0 +1,16 @@
+@import './utils/mixins.scss';
+@import './utils/colors.scss';
+
+.app {
+  padding: 84px 64px 48px;
+  min-height: 100vh;
+  background-color: $color-white;
+
+  @include onTablet {
+    padding-inline: 48px;
+  }
+
+  @include onPhone {
+    padding: 64px 24px 32px;
+  }
+}

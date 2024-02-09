@@ -1,0 +1,93 @@
+@import '../../utils/mixins.scss';
+@import '../../utils/colors.scss';
+
+.header {
+  display: flex;
+  align-items: center;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 60px;
+  background-color: $color-blue;
+
+  @include onPhone {
+    height: 40px;
+  }
+
+  &__nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-inline: 64px;
+    width: 100%;
+
+    @include onTablet {
+      padding-inline: 48px;
+    }
+  
+    @include onPhone {
+      padding-inline: 24px;
+    }
+  }
+
+  &__logo {
+    font-size: 24px;
+    color: $color-light;
+
+    @include onPhone {
+      font-size: 16px;
+    }
+  }
+
+  &__link {
+    position: relative;
+    font-size: 18px;
+
+    &--active {
+      &::after {
+        content: "";
+        position: absolute;
+        left: 0;
+        right: 0;
+        bottom: -6px;
+        width: 100%;
+        height: 1px;
+        background-color: $color-white;
+      }
+    }
+  }
+
+  &__button {
+    padding-inline: 10px;
+    height: 28px;
+    font-size: 18px;
+    font-weight: 700;
+    line-height: 28px;
+
+    border-radius: 3px;
+    border-color: transparent;
+    color: $color-black;
+    background-color: $color-white;
+    cursor: pointer;
+
+    @include onPhone {
+      height: 18px;
+      font-size: 14px;
+      line-height: 18px;
+    }
+
+    &:hover {
+      box-shadow: 0 0 8px $color-grey;
+    }
+  }
+
+  &__links {
+    display: flex;
+    gap: 16px;
+  }
+
+  &__link {
+    color: $color-light;
+  }
+}

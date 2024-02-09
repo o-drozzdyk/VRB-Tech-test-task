@@ -1,0 +1,60 @@
+@import '../../utils/mixins.scss';
+@import '../../utils/colors.scss';
+
+.page {
+  display: flex;
+  flex-direction: column;
+  &__form {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    margin-bottom: 24px;
+    max-width: calc(100% - 24px - 24px);
+  }
+
+  &__input {
+    padding: 4px;
+    height: 28px;
+    font-size: 16px;
+    border: 1px solid $color-black;
+    border-radius: 3px;
+
+    @include onPhone {
+      max-width: 186px;
+    }
+  }
+
+  &__button {
+    height: 28px;
+    padding: 0 10px;
+    font-size: 16px;
+    font-weight: 700;
+  
+    border-radius: 3px;
+    cursor: pointer;
+  
+    @include onPhone {
+      font-size: 14px;
+      line-height: 16px;
+    }
+
+    &:hover {
+      box-shadow: 0 0 8px $color-blue;
+    }
+
+    &--search {
+      border: 2px solid $color-blue;
+      color: $color-black;
+      background-color: transparent;
+    }
+  
+    &--more {
+      margin-inline: auto;
+      margin-top: 24px;
+      padding-inline: 16px;
+      color: $color-light;
+      border-color: transparent;
+      background-color: $color-blue;
+    }
+  }
+}

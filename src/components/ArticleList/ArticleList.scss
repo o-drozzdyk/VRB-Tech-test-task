@@ -1,0 +1,15 @@
+@import '../../utils/mixins.scss';
+
+.articles {
+  display: grid;
+  grid-template-columns: repeat(3, auto);
+  gap: 16px;
+
+  @include onTablet {
+    grid-template-columns: repeat(2, auto);
+  }
+
+  @include onPhone {
+    grid-template-columns: repeat(1, auto);
+  }
+}
