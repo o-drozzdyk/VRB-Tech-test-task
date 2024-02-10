@@ -3,6 +3,9 @@
 ## Live DEMO
 You can view a live demo of the project here: [Articles DEMO](https://o-drozzdyk.github.io/VRB-Tech-test-task/)
 
+## Note
+You cannot view articles from the API in the demo project because the server only allows requests from localhost. To see all the functionalities of the project, you can clone the repository and run the project on your computer. Instructions for cloning are provided below.
+
 ## Description
 Articles is a news viewing project that allows users to search for news articles by title or description. The interface displays 10 articles at a time, with the option to load more articles by clicking the "More" button. Utilizing URL Search Params, users can also conduct searches directly through URL modifications. This project features the ability to add new articles, which are stored in localStorage and can be viewed under the "My Articles" page. User-added articles can be deleted or edited, and any article can be pinned to appear first on the page.
 
