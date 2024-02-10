@@ -54,7 +54,8 @@ export const articlesSlice = createSlice({
     pinArticle: (state, action: PayloadAction<Article>) => {
       state.pinnedArticle = action.payload;
 
-      const articleIndex = state.articles.indexOf(action.payload);
+      const articleIndex = state.articles
+        .findIndex(article => article.publishedAt === state.pinnedArticle?.publishedAt);
 
       if (articleIndex !== 0) {
         state.articles = 
