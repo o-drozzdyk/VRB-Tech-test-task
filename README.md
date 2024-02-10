@@ -1,46 +1,56 @@
-# Getting Started with Create React App
+# Articles
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## Live DEMO
+You can view a live demo of the project here: [Articles DEMO](https://o-drozzdyk.github.io/VRB-Tech-test-task/)
 
-## Available Scripts
+## Description
+Articles is a news viewing project that allows users to search for news articles by title or description. The interface displays 10 articles at a time, with the option to load more articles by clicking the "More" button. Utilizing URL Search Params, users can also conduct searches directly through URL modifications. This project features the ability to add new articles, which are stored in localStorage and can be viewed under the "My Articles" page. User-added articles can be deleted or edited, and any article can be pinned to appear first on the page.
 
-In the project directory, you can run:
+## Technologies
+- React
+- React Router
+- Redux Toolkit
+- TypeScript
+- SCSS
 
-### `npm start`
+## Features
+- **Search Functionality:** Users can search for articles by titles or descriptions.
+- **Dynamic Loading:** Initially displays 10 articles with the option to load more.
+- **URL Search Params:** Enables searching through URL modification.
+- **Add Articles:** Users can add new articles.
+- **Local Storage:** User-added articles are stored in localStorage and displayed under "My Articles".
+- **Edit and Delete:** Users can edit or delete their articles.
+- **Pinning Articles:** Any article can be pinned to appear first on the page.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+## Getting Started
+To get a local copy up and running, follow these simple steps.
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+### Prerequisites
+Ensure you have [Node.js](https://nodejs.org/) installed on your machine. This will include npm (Node Package Manager) which is necessary to install dependencies and run the project.
 
-### `npm test`
+### Installation
+1. Clone the repository:
+```bash
+git clone https://github.com/your-username/Articles.git
+```
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+2. Navigate to the project directory:
+```bash
+cd VRB-Tech-test-task
+```
 
-### `npm run build`
+3. Install NPM packages:
+```bash
+npm install
+```
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+## Running the Project
+After installing the dependencies, you can start the project by running:
+```bash
+npm start
+```
+This command runs the app in the development mode. Open http://localhost:3000 to view it in your browser. The page will reload when you make changes.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+## Contributing
+Contributions to this project are welcome. Please open an issue or submit a pull request for any features, bug fixes, or enhancements.
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
-
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).

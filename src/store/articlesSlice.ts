@@ -82,7 +82,7 @@ export const articlesSlice = createSlice({
       const newArticle = { ...action.payload, publishedAt: '' + new Date() };
 
       const savedArticles = JSON.parse(localStorage.getItem('articles') || '[]');
-      localStorage.setItem('articles', JSON.stringify([...savedArticles, newArticle]));
+      localStorage.setItem('articles', JSON.stringify([newArticle, ...savedArticles]));
     },
 
     deleteArticle: (state, action: PayloadAction<Article>) => {

@@ -15,16 +15,14 @@ export const HomePage = () => {
   const { query, page } = useSelector((state: RootState) => state.articles);
 
   const queryParam = searchParams.get('query') || query;
-  const pageParam = +(searchParams.get('page') || page);
 
   useEffect(() => {
-    dispatch(fetchArticles({ query: queryParam, page: pageParam }));
+    dispatch(fetchArticles({ query: queryParam, page }));
   }, [])
 
   useEffect(() => {
     const newSearchParams = new URLSearchParams();
     newSearchParams.set('query', query);
-    newSearchParams.set('page', page.toString());
 
     setSearchParams(newSearchParams);
   }, [query, page])
@@ -36,15 +34,7 @@ export const HomePage = () => {
       dispatch(resetPage());
       dispatch(fetchArticles({ query: queryParam, page: 1 }));
     } 
-    
-    if (+pageParam && page !== +pageParam) {
-      dispatch(setPage(+pageParam));
-      dispatch(fetchArticles({ query, page: +pageParam }));
-      dispatch(setPage(+pageParam));
-    }
-
-
-  }, [queryParam, pageParam])
+  }, [queryParam])
 
   const search = (reset = false) => {
     if (reset && input.length >= 3) {

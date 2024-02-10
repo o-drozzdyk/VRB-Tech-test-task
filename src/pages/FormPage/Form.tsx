@@ -37,12 +37,12 @@ export const Form = () => {
         }));
       }
 
-      navigate('/');
+      navigate('/my-articles');
     }
   };
 
   const handleCancelClick = () => {
-    navigate('/');
+    navigate('/my-articles');
   };
 
   return (
