@@ -56,5 +56,12 @@
       border-color: transparent;
       background-color: $color-blue;
     }
+
+    &--disabled {
+      border: none;
+      color: $color-black;
+      background-color: $color-grey;
+      cursor: initial;
+    }
   }
 }

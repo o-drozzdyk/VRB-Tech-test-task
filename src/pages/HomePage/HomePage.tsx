@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from "react";
+import cn from 'classnames';
 import { ArticleList } from "../../components/ArticleList";
 import './HomePage.scss';
 import { useSelector } from "react-redux";
@@ -12,7 +13,7 @@ export const HomePage = () => {
   const [searchParams, setSearchParams] = useSearchParams();
 
   const dispatch = useAppDispatch();
-  const { query, page } = useSelector((state: RootState) => state.articles);
+  const { query, page, status } = useSelector((state: RootState) => state.articles);
 
   const queryParam = searchParams.get('query') || query;
 
@@ -33,14 +34,16 @@ export const HomePage = () => {
       dispatch(setQuery(queryParam));
       dispatch(resetPage());
       dispatch(fetchArticles({ query: queryParam, page: 1 }));
-    } 
+    }
   }, [queryParam])
 
   const search = (reset = false) => {
-    if (reset && input.length >= 3) {
-      dispatch(fetchArticles({ query: input, page: 1 }));
-      dispatch(setQuery(input));
-      dispatch(resetPage());
+    if (reset) {
+      if (input.length >= 3 && input !== query) {
+        dispatch(fetchArticles({ query: input, page: 1 }));
+        dispatch(setQuery(input));
+        dispatch(resetPage());
+      }
     } else {
       dispatch(setPage(page + 1));
       dispatch(fetchArticles({ query, page: page + 1 }));
@@ -58,17 +61,21 @@ export const HomePage = () => {
     <div className="page">
       <form className="page__form">
         <input
-          type="text" 
+          type="text"
           className="page__input"
           value={input}
           onChange={(event) => setInput(event.target.value)}
           onKeyDown={handleEnterKeyClick}
         />
 
-        <button 
+        <button
           type="button"
-          className="page__button page__button--search"
+          className={cn('page__button page__button--search', {
+            'page__button--disabled': status === 'loading',
+          })}
           onClick={() => search(true)}
+          disabled={status === 'loading'}
+
         >
           Search
         </button>
@@ -78,8 +85,11 @@ export const HomePage = () => {
 
       <button
         type="button"
-        className="page__button page__button--more"
+        className={cn('page__button page__button--more', {
+          'page__button--disabled': status === 'loading',
+        })}
         onClick={() => search()}
+        disabled={status === 'loading'}
       >
         More
       </button>
