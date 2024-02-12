@@ -1,15 +1,15 @@
 {
   "files": {
-    "main.css": "/VRB-Tech-test-task/static/css/main.c60cc599.css",
-    "main.js": "/VRB-Tech-test-task/static/js/main.60b797d9.js",
+    "main.css": "/VRB-Tech-test-task/static/css/main.02f75d25.css",
+    "main.js": "/VRB-Tech-test-task/static/js/main.d3658a91.js",
     "static/js/592.bba00f6d.chunk.js": "/VRB-Tech-test-task/static/js/592.bba00f6d.chunk.js",
     "index.html": "/VRB-Tech-test-task/index.html",
-    "main.c60cc599.css.map": "/VRB-Tech-test-task/static/css/main.c60cc599.css.map",
-    "main.60b797d9.js.map": "/VRB-Tech-test-task/static/js/main.60b797d9.js.map",
+    "main.02f75d25.css.map": "/VRB-Tech-test-task/static/css/main.02f75d25.css.map",
+    "main.d3658a91.js.map": "/VRB-Tech-test-task/static/js/main.d3658a91.js.map",
     "592.bba00f6d.chunk.js.map": "/VRB-Tech-test-task/static/js/592.bba00f6d.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.c60cc599.css",
-    "static/js/main.60b797d9.js"
+    "static/css/main.02f75d25.css",
+    "static/js/main.d3658a91.js"
   ]
 }
